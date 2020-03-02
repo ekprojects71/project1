@@ -1,0 +1,118 @@
+.edit-bug-window {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    z-index: 3;
+    background: rgb(248, 248, 248);
+    width: 650px;
+    margin-left: -325px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.edit-bug-exit {
+    float: right;
+    font-weight: 600;
+    font-size: 1.2em;
+    background: none;
+    padding: 1px 11px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.edit-bug-exit:focus {
+    outline: none;
+}
+
+.edit-bug-window div {
+    width: 90%;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.edit-bug-title {
+    margin-top: 30px;
+}
+
+.edit-bug-title span:nth-child(1) {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.edit-bug-title span,
+.edit-bug-status span,
+.edit-bug-dev span,
+.edit-bug-project span {
+    display: block;
+}
+
+.edit-bug-title-charlimit span {
+    display: inline !important;
+    font-size: 1em !important;
+}
+
+.edit-bug-descrip p {
+    margin: 0;
+    padding: 0;
+}
+
+.edit-bug-title-charlimit,
+.edit-bug-descrip-charlimit {
+    font-size: 13px !important;
+}
+
+.edit-bug-descrip textarea {
+    margin: 0;
+    padding: 2px 5px;
+    display: block;
+    width: 90%;
+    height: 100px;
+    resize: none;
+}
+
+.edit-bug-window input[type="text"] {
+    width: 90%;
+    padding: 2px 5px;
+}
+
+.edit-bug-window select {
+    max-width: 120px;
+}
+
+.edit-bug-window input[type="text"],
+.edit-bug-window select,
+.edit-bug-window textarea {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 3px;
+}
+.edit-bug-window input[type="text"]:focus,
+.edit-bug-window select:focus,
+.edit-bug-window textarea:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgb(58, 160, 255);
+}
+
+.edit-bug-project select {
+    margin-bottom: 30px;
+}
+
+.edit-bug-submit-btn {
+    padding: 4px 15px;
+    background: rgb(88, 166, 255);
+    color: white;
+    border-radius: 25px;
+}
+.edit-bug-submit-btn:focus {
+    outline: none;
+}
+
+.edit-bug-delete-btn {
+    padding: 4px 15px;
+    background: rgb(255, 49, 49);
+    color: white;
+    border-radius: 25px;
+    float: right;
+}
+.edit-bug-delete-btn:focus {
+    outline: none;
+}

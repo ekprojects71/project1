@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex, noarchive">
+    <title>BugTracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles_app.css">
+    <link rel="stylesheet" href="css/styles_bug_submit.css">
+    <link rel="stylesheet" href="css/styles_projects.css">
+    <link rel="stylesheet" href="css/styles_ticket_history.css">
+    <link rel="stylesheet" href="css/styles_view_bug.css">
+    <link rel="stylesheet" href="css/styles_edit_bug.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <img src="images/logo_white.svg" alt="bug-tracker-logo" class="navbar-brand nav-logo">
+
+        <div class="navbar-nav ml-auto">
+            <button class="user-actions navbar-right dropdown-toggle">
+                <img src="images/user.svg" alt="user-signin">
+                <span class="first-name">FirstName</span>
+            </button>
+        </div>
+        
+        <!-- Dropdown Menu -->
+        <div class="userActionsDropdown d-none">
+            <form id="ua-submit"></form>
+            <div class="user-profile">
+                <img src="images/user.svg" alt="user-signin">
+                <span class="profile-fname">FirstName</span>
+                <span class="profile-lname">LastName</span>
+                <p class="profile-type">UserType</p>
+            </div>
+            <button class="profile-signout dropdown-item pl-3" form="ua-submit">Sign Out</button>
+        </div>
+    </nav>
+    
+    <!-- Main App -->
+    <div class="container shadow">
+
+        <div class="list-banner">
+
+            <div class="general">
+                <div>
+                    <span class="company-name">Company Name</span>
+                </div>
+                <button class="bug-submit">Submit A Bug</button>
+            </div>
+
+            <div class="general-filters">
+                <div class="status-filter">
+                    <label for="status">Show:</label>
+                    <select id="status">
+                        <option value="all" selected>All</option>
+                        <option value="0">New</option>
+                        <option value="1">Minor</option>
+                        <option value="2">Major</option>
+                        <option value="3">Severe</option>
+                        <option value="4">Solved</option>
+                    </select>
+                </div>
+                <div class="project-filter">
+                    <label for="project">Project Filter:</label>
+                    <select id="project">
+                        <option value="all" selected>All</option>
+                        <option value="unassigned">Unassigned</option>
+                        <!-- Projects are listed here -->
+                    </select>
+                </div>
+                <div>
+                    <label for="my-bugs">Only Show My Tickets</label>
+                    <input type="checkbox" id="my-bugs">
+                </div>
+                <div>
+                    <label for="bug-search">Search:</label>
+                    <input type="text" id="bug-search" placeholder="Enter a bug title">
+                </div>
+            </div>
+
+            <!-- the admin section is drawn to the dom by JS -->
+            <div class="admin d-none">
+                <div>
+                    <span class="aa-label">Admin Actions:</span>
+                </div>
+                <div class="admin-actions">
+                    <div>
+                        <a href="#" class="view-projects-admin">View Projects</a>
+                    </div>
+                    <div>
+                        <a href="#" class="view-tickets-admin">View Ticket History</a>
+                    </div>
+                    <div class="dev-filter">
+                        <label for="dev-filter">Filter Tickets by Developer:</label>
+                        <select id="dev-filter">
+                            <option value="all" selected>All</option>
+                            <option value="unassigned">Unassigned</option>
+                            <!-- Projects listed here -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Contains all the bug tickets -->
+        <div class="tickets-container">
+            <div class="tickets-banner">
+                <div>
+                    <span>Tickets</span>
+                </div>
+                <div class="total-tickets">
+                    <span>Total Tickets:</span>
+                    <span class="num-tickets">0</span>
+                </div>
+            </div>
+            
+            <!-- Bug Cards are placed here -->
+            <div class="bug-cards-container">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- App Windows Begin Here -->
+    <div class="bckg-tint d-none"></div>
+
+    <!-- Submit Bug Window -->
+    <div class="bug-submit-window shadow-lg d-none">
+      
+    </div>
+
+    <!-- Edit Projects Window -->
+    <div class="project-edit-window shadow-lg d-none">
+        <button class="project-edit-exit">X</button>
+        <div class="project-edit-main">
+            
+        </div>
+        <!-- Add Project Form -->
+        <div class="project-add shadow-lg d-none">
+            
+        </div>
+        <!-- Edit Project Form -->
+        <div class="project-edit shadow-lg d-none">
+            
+        </div>
+        <!-- Delete Project Confirmation -->
+        <div class="project-delete-confirm shadow-lg d-none">
+            
+        </div>
+    </div>
+
+    <!-- Ticket History Window -->
+    <div class="ticket-hist-window shadow-lg d-none">
+       
+    </div>
+
+    <!-- View Bug Window -->
+    <div class="view-bug-window shadow-lg d-none">
+        
+    </div>
+    
+    <!-- Edit Bug Window -->
+    <div class="edit-bug-window shadow-lg d-none">
+        
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="scripts/requests.js"></script>
+    <script src="scripts/session.js"></script>
+    <script src="scripts/bugsList.js"></script>
+    <script src="scripts/dashboard.js"></script>
+    <script src="scripts/backgroundTint.js"></script>
+    <script src="scripts/modal_EditBug.js"></script>
+    <script src="scripts/modal_ViewBug.js"></script>
+    <script src="scripts/modal_TicketHistory.js"></script>
+    <script src="scripts/modal_EditProject.js"></script>
+    <script src="scripts/modal_BugSubmit.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

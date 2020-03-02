@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {
+    background: rgb(210, 211, 214);
+}
+
+.login-screen {
+    max-width: 800px !important;
+    height: 495px;
+    display: flex;
+    padding: 0;
+    margin-top: 10%;
+}
+
+.login-left {
+    padding: 40px;
+    width: 350px;
+    background: rgb(238, 238, 238);
+}
+
+.logo-img {
+    max-width: 200px;
+}
+
+.login-right {
+    width: 450px;
+    background: rgb(61, 120, 231);
+}
+
+.welcome {
+    margin-top: 15%;
+    color: rgb(62, 107, 212);
+}
+
+.login {
+    width: 300px;
+    margin: 25% auto;
+}
+
+#login {
+    width: 100%;
+    margin-top: 10px;
+    padding: 6px 0;
+    background: rgb(61, 231, 118);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.247);
+}
+
+.email-field, .pw-field {
+    border-radius: 10px;
+    margin-bottom: 7px;
+    background: white;
+    font-size: 1em;
+    padding: 6px 2px;
+    overflow: hidden;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.247);
+}
+
+#email, #password {
+    width: 85%;
+    padding-left: 6px;
+}
+#email:focus, #password:focus {
+    outline: none;
+}
+
+.email-field img,
+.pw-field img {
+    max-width: 1.1em;
+    margin-left: 10px;
+    position: relative;
+    top: -1px;
+}
+
+
+.login-error-message {
+    text-align: center;
+    background: rgb(255, 236, 236);
+    color: black;
+    font-size: 0.8em;
+    font-weight: 500;
+    font-style: italic;
+    padding: 5px 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11);
+}

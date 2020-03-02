@@ -1,0 +1,66 @@
+.view-bug-window {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    z-index: 3;
+    background: rgb(241, 241, 241);
+    width: 1000px;
+    margin-left: -500px;
+    max-height: 510px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.view-bug-exit {
+    float: right;
+    font-weight: 600;
+    font-size: 1.2em;
+    background: none;
+    padding: 1px 11px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.view-bug-exit:focus {
+    outline: none;
+}
+
+.view-bug-window div {
+    width: 90%;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.view-bug-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.view-bug-title span:nth-child(2) {
+    font-size: 1.7em;
+}
+
+.view-bug-descrip {
+    line-height: 1.6em;
+}
+
+.view-bug-submitter,
+.view-bug-developer,
+.view-bug-project {
+    margin-bottom: 5px;
+}
+
+.view-bug-submitter span,
+.view-bug-developer span,
+.view-bug-project span,
+.view-bug-updated span {
+    display: inline-block;
+    font-size: 0.9em;
+}
+.view-bug-submitter span:nth-child(1),
+.view-bug-developer span:nth-child(1),
+.view-bug-project span:nth-child(1),
+.view-bug-updated span:nth-child(1) {
+    width: 120px;
+    font-weight: 500;
+    color: rgb(59, 59, 59);
+}

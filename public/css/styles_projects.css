@@ -1,0 +1,187 @@
+.project-edit-window {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    z-index: 3;
+    background: rgb(248, 248, 248);
+    width: 600px;
+    margin-left: -300px;
+    max-height: 510px;
+    text-align: center;
+}
+
+.project-edit-exit {
+    float: right;
+    font-weight: 600;
+    font-size: 1.2em;
+    background: none;
+    padding: 1px 11px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+.project-edit-exit:focus {
+    outline: none;
+}
+
+.project-edit-window h2 {
+    margin-top: 50px;
+    color: rgb(46, 46, 46);
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+.project-edit-add {
+    position: relative;
+    left: 24%;
+    padding: 3px 25px 3px 18px;
+    font-size: 1.1em;
+    background: rgb(88, 166, 255);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+.project-edit-add:focus {
+    outline: none;
+}
+
+.projects-list {
+    display: block;
+    position: relative;
+    left: 5px;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid rgb(238, 238, 238);
+    list-style-type: none;
+    background: white;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.project-list-item {
+    width: 100%;
+    padding: 5px 0;
+    text-align: left;
+}
+
+.project-list-item span {
+    display: inline-block;
+    width: 80%;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-list-item img {
+    opacity: 0.1;
+}
+
+.project-list-item:hover img {
+    opacity: 1.0;
+}
+
+.project-list-item:hover {
+    background: rgb(230, 234, 240);
+}
+
+.proj-edit-icon,
+.proj-del-icon {
+    max-width: 1.5em;
+    float: right;
+    cursor: pointer;
+}
+
+.proj-edit-icon {
+    margin-right: 8px;
+}
+
+/* Add Project, Edit Project */
+.project-add,
+.project-edit {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 400px;
+    margin: 0 auto 0 -200px;
+    padding: 20px 0;
+    border-radius: 8px;
+    z-index: 5;
+    background: rgb(241, 241, 241);
+    text-align: center;
+    font-size: 1.15em;
+}
+
+#project-add-form input[type=text],
+#project-edit-form input[type=text] {
+    padding: 2px 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(224, 224, 224);
+}
+#project-add-form input[type=text]:focus,
+#project-edit-form input[type=text]:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgb(58, 160, 255);
+}
+
+.project-add button,
+.project-edit button {
+    padding: 2px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.proj-form-btns {
+    margin-left: 7px;
+}
+
+.prj-add-btn,
+.prj-edit-btn {
+    background: rgb(88, 166, 255);
+    color: white;
+}
+
+.prj-cancel-btn {
+    background: rgb(153, 160, 168);
+    color: white;
+}
+
+.prj-add-btn:focus,
+.prj-edit-btn:focus,
+.prj-cancel-btn:focus {
+    outline: none;
+}
+
+/* Delete Confirmation */
+.project-delete-confirm {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 450px;
+    margin: 0 auto 0 -225px;
+    padding: 20px 0;
+    border-radius: 8px;
+    z-index: 5;
+    background: rgb(233, 218, 218);
+    text-align: center;
+    font-size: 1.15em;
+}
+
+.project-delete-confirm p {
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.project-delete-confirm button {
+    padding: 2px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.prj-delete-btn {
+    background: rgb(243, 44, 44);
+    color: white;
+}
+.prj-delete-btn:focus {
+    outline: none;
+}

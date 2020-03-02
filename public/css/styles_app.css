@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {
+    background: rgb(210, 211, 214);
+    z-index: 0;
+}
+
+/* background tint */
+.bckg-tint {
+    position: fixed;
+    /* z-index: 2; */
+    background: rgba(0, 0, 0, 0.555);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* Navbar */
+.navbar {
+    background: rgb(61, 120, 231);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205);
+}
+
+.nav-logo {
+    max-width: 200px;
+}
+
+.user-actions, .user-actions:focus {
+    background: white;
+    padding: 5px 10px 0 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+}
+
+.user-actions img {
+    max-height: 2em;
+    margin-right: 10px;
+    position: relative;
+    top: -6px;
+}
+
+.first-name {
+    margin-right: 8px;
+    font-size: 1.2em;
+    color: rgb(36, 36, 36);
+}
+
+
+/* Navbar Dropdown Menu */
+.userActionsDropdown {
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    background: white;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.user-profile {
+    margin: 10px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.profile-fname, .profile-lname {
+    font-size: 1.5em;
+    color: rgb(61, 120, 231);
+    position: relative;
+    top: 10px;
+}
+
+.profile-fname::after {
+    content: " ";
+}
+
+.user-profile img {
+    max-height: 3.3em;
+    margin-right: 10px;
+}
+
+.profile-type {
+    font-size: 0.9em;
+    font-style: italic;
+    color: rgb(149, 156, 170);
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.profile-signout, .profile-signout:focus {
+    outline: none;
+    border: none;
+}
+
+.profile-signout:hover {
+    background: rgb(88, 166, 255);
+}
+
+
+/* App Container */
+.container {
+    margin-top: 5%;
+    margin-bottom: 50px;
+    min-width: 70% !important;
+    border-radius: 20px 20px 5px 5px !important;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* Banner Section */
+.general {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 20px 10px 10px 10px;
+    background: rgb(187, 198, 212);
+}
+
+.general div {
+    margin: 0 50px 0 10px;
+    padding: 0;
+}
+
+.company-name {
+    font-size: 2em;
+    color: white;
+}
+
+.bug-submit {
+    margin-left: auto;
+}
+
+.bug-submit, .bug-submit:focus {
+    padding: 10px 30px;
+    font-size: 1.2em;
+    margin-right: 15px;
+    color: white;
+    background: rgb(88, 166, 255);
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.bug-submit:hover {
+    background: rgb(159, 201, 250);
+}
+
+
+/* General Filters */
+.general-filters {
+    display: flex;
+    padding: 21px;
+    background: rgb(241, 241, 241);
+    border-bottom: solid 1px rgb(230, 229, 229);
+}
+
+.general-filters div {
+    margin-right: 20px;
+}
+
+.general-filters label {
+    font-size: 1.2em;
+}
+
+.general-filters div:nth-child(3) label {
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.general-filters div:nth-child(3) {
+    margin-right: 60px;
+    margin-top: 4px;
+}
+
+.general-filters select {
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 30px;
+    max-width: 150px;
+    border: 1px solid rgb(237, 237, 237);
+}
+.general-filters select:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgb(58, 160, 255);
+}
+
+.general-filters input[type='checkbox'] {
+    margin-left: 5px;
+    transform: scale(1.5);
+}
+
+.general-filters div:nth-child(4) input[type="text"] {
+    font-size: 1.1em;
+    padding: 2px 15px;
+    border-radius: 25px;
+    border: 1px solid rgb(226, 225, 225);
+}
+
+.general-filters div:nth-child(4) input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgb(58, 160, 255);
+}
+
+
+/* Admin Filters */
+.admin {
+    padding: 11px 21px 41px 21px;
+    background: rgb(241, 241, 241);
+}
+
+.aa-label {
+    display: inline-block;
+    font-style: italic;
+    color: rgb(155, 155, 155);
+    margin-bottom: 10px;
+    border-bottom: solid 1px rgb(238, 238, 238);
+}
+
+.admin-actions {
+    display: flex;
+    font-size: 1.1em;
+}
+
+.admin-actions a {
+    position: relative;
+    top: 5px;
+}
+
+.admin-actions div {
+    margin-right: 50px;
+}
+
+.admin-actions select {
+    background: white;
+    border-radius: 10px;
+    padding: 3px 5px;
+    margin-right: 30px;
+    max-width: 150px;
+    border: 1px solid rgb(237, 237, 237);
+}
+.admin-actions select:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgb(58, 160, 255);
+}
+
+
+/* Bug Ticket Container */
+.tickets-container {
+    border-top: 2px solid rgb(211, 211, 211);
+}
+
+.tickets-banner {
+    background: rgb(187, 198, 212);
+    padding: 10px 0 20px 0;
+    color: white;
+    vertical-align: middle;
+}
+
+.tickets-banner div {
+    display: inline-block;
+}
+
+.tickets-banner div:nth-child(1)
+{
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+.total-tickets {
+    font-size: 1.2em;
+    float: right;
+    margin-right: 30px;
+}
+
+
+/* Bug Card */
+.bug-card {
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-top: 2px solid rgb(211, 211, 211);
+    padding: 0;
+}
+
+.tickets-container .bug-card:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Status Styles */
+.status {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: auto 0;
+    width: 150px;
+}
+.new {
+    background: rgb(38, 150, 255);
+}
+.minor {
+    background: rgb(216, 216, 47);
+}
+.major {
+    background: orange;
+}
+.severe {
+    background: red;
+}
+.solved {
+    background: rgb(0, 184, 0);
+}
+
+/* Card Top */
+.card-top {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+}
+
+.bug-title {
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+/* Card Middle */
+.card-middle {
+    overflow: hidden;
+    background: rgb(252, 252, 252);
+    padding: 6px 0 15px 0;
+}
+
+.card-middle div {
+    vertical-align: top;
+    max-width: 90%;
+}
+
+.bug-description {
+    color: rgb(121, 125, 126);
+    display: -webkit-box;
+    line-height: 1.4em;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 90px;
+    max-height: 90px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+/* Card Bottom */
+.card-bottom {
+    vertical-align: top;
+    background: rgb(223, 228, 230);
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.card-bottom div {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.card-bottom button, .card-bottom button:focus {
+    border-radius: 2px;
+    outline: none;
+    color: rgb(102, 102, 102);
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.card-bottom button:hover {
+    background-color: rgb(115, 180, 241);
+    color: white;
+}
+
+.card-bottom button:nth-child(2) {
+    margin-left: -4px;
+    border-left: 1px solid rgb(208, 214, 228);
+}
+
+.bug-assigned-div span, .bug-submitter-div span, .bug-project-div span {
+    color: rgb(111, 114, 121);
+    display: block;
+    padding: 0 40px 0 15px;
+    border-right: 1px solid rgb(184, 185, 187);
+}
+
+.bug-assigned-div span {
+    border-left: 1px solid rgb(184, 185, 187);
+}
+
+.bug-assigned-div span:nth-child(1), 
+.bug-submitter-div span:nth-child(1), 
+.bug-project-div span:nth-child(1) {
+    font-size: 0.7em;
+    margin-bottom: -3px;
+}
+
+.bug-time-div {
+    float: right;
+    margin-left: 20px;
+    color: rgb(111, 114, 121);
+}
+
+.bug-time-div span {
+    display: block;
+    padding-right: 20px;
+}
+
+.bug-time-div span:nth-child(1) {
+    font-size: 0.7em;
+}
+
+.bug-time-div span:nth-child(2) {
+    font-size: 0.8em;
+    font-style: italic;
+}

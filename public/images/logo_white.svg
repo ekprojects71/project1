@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 291.04166 59.531251"
+   height="225"
+   width="1100">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     transform="translate(0,-237.46874)"
+     id="layer1">
+    <text
+       transform="scale(0.81731439,1.2235194)"
+       id="text817"
+       y="240.24762"
+       x="-4.5987687"
+       style="font-style:normal;font-weight:normal;font-size:15.33829212px;line-height:1.25;font-family:sans-serif;letter-spacing:-1.91293752px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.38345727;"
+       xml:space="preserve"><tspan
+         rotate="0 0 0 0 0 0 0 0 0 0 0"
+         dy="0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.1276474px;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans';letter-spacing:-1.91293752px;word-spacing:0.38345727px;fill:#ffffff;fill-opacity:1;stroke-width:0.38345727;"
+         y="240.24762"
+         x="-4.5987687"
+         id="tspan815"><tspan
+           id="tspan827"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Lucida Sans Typewriter';-inkscape-font-specification:'Lucida Sans Typewriter';letter-spacing:-1.91293752px;fill:#ffffff;fill-opacity:1;">BUG</tspan><tspan
+           id="tspan821"
+           style="font-style:oblique;font-variant:normal;font-weight:600;font-stretch:semi-condensed;font-size:51.1276474px;line-height:3;font-family:'Lucida Sans Typewriter';-inkscape-font-specification:'Lucida Sans Typewriter Semi-Bold Oblique Semi-Condensed';letter-spacing:-1.91293752px;fill:#ffffff;fill-opacity:1;stroke-width:0.38345727;">TRACKER</tspan></tspan></text>
+  </g>
+</svg>

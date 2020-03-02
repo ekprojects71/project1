@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="nofollow, noindex, noarchive">
+    <title>BugTracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles_login.css">
+</head>
+<body>
+    
+    <div class="container shadow login-screen">
+        <div class=login-left>
+            <div class="logo">
+                <img src="images/logo_blue.svg" alt="bug-tracker-logo-svg" class="logo-img">
+            </div>
+            <div class="welcome">
+                <h2>Welcome!</h2>
+                <p>Please sign in to continue.</p>
+            </div>
+        </div>
+        <div class="login-right">
+            <div class="login-error-message d-none">
+                <span></span>
+            </div>
+            <form class="login" action="/auth/login" method="POST">
+                <div class="email-field">
+                    <img src="images/mailicon.svg" alt="email-login-img">
+                    <input type="email" id="email" name="email" placeholder="myaddress@example.com" required>
+                </div>
+                <div class="pw-field">
+                    <img src="images/passwordicon.svg" alt="password-login-img">
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <button type="submit" class="btn" id="login">Login</button>
+            </form> 
+        </div>
+    </div>
+
+    <script src="scripts/requests.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+</html>
