@@ -24,7 +24,7 @@ app.use(session({
         pool: pool
     }),
     cookie: {
-        secure: false,
+        secure: true,
         httpOnly: true,
         sameSite: true,
         maxAge: 1000 * 60 * 15

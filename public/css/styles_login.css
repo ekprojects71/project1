@@ -15,6 +15,7 @@ body {
     display: flex;
     padding: 0;
     margin-top: 10%;
+    overflow: hidden;
 }
 
 .login-left {
@@ -30,11 +31,13 @@ body {
 .login-right {
     width: 450px;
     background: rgb(61, 120, 231);
+    overflow: hidden;
+    box-shadow: -3px 0px 20px #00000073;
 }
 
 .welcome {
     margin-top: 15%;
-    color: rgb(62, 107, 212);
+    color: #3e6bd4;
 }
 
 .login {
@@ -88,4 +91,44 @@ body {
     font-style: italic;
     padding: 5px 0;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11);
+}
+
+
+.demo-section {
+    background: #e6e6e6;
+    text-align: center;
+    height: 140px;
+    color: #3e6bd4;
+}
+
+.demo-list {
+    list-style-type: none;
+}
+.demo-list li {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 20px;
+}
+.demo-list li:last-child {
+    margin-right: 0;
+}
+
+.demo-btn {
+    text-transform: capitalize;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 1px solid #ffffff00;
+    color: white;
+}
+.demo-btn:hover {
+    border: 1px solid black;
+}
+.admin-demo {
+    background: #3e6bd4;
+}
+.dev-demo {
+    background: #3de776;
+}
+.user-demo {
+    background: #ff7348;
 }
