@@ -54,7 +54,7 @@ router.post("/bugs", (request,response) => {
     try {
         let bug = request.body;
         
-        if(request.session.loggedin) {
+        if(request.session.user) {
             bug.company = request.session.user.company;
 
             queries.addBug(bug);

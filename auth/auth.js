@@ -28,7 +28,7 @@ router.post("/login", async (request, response) => {
             user.first_name = userData.first_name;
             user.last_name = userData.last_name;
             
-            request.session.loggedin = true;
+            //create user session
             request.session.user = user;
 
             //console.table(request.session.user);
@@ -88,10 +88,8 @@ router.post("/login/demo/:credentials", async (req, res) => {
             user.first_name = userData.first_name;
             user.last_name = userData.last_name;
             
-            req.session.loggedin = true;
+            //create user session
             req.session.user = user;
-
-            console.table(req.session.user);
 
             return res.status(200).send("Login successful");
             
@@ -109,18 +107,18 @@ router.post("/login/demo/:credentials", async (req, res) => {
 //logout, destroy session
 router.get("/logout", (request, response) => {
     try{
-        if(request.session.loggedin) {
+        if(request.session.user) {
             request.session.destroy((err) => {
                 if(err) {
                     console.log(err);
                 }
                 else {
-                    response.redirect("/login");
+                    response.redirect("/");
                 }
             })
         }
         else {
-            response.redirect("/login");
+            response.redirect("/");
         }
     }
     catch{

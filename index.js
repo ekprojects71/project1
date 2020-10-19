@@ -2,116 +2,79 @@
 const express = require("express");
 require("dotenv").config();
 const session = require("express-session");
-const PGstore = require("connect-pg-simple")(session);
+const pgSession = require("connect-pg-simple")(session);
 const pool = require("./DB/index");
+//no bycrypt since user registration will not be implemented until i remake this app
 
 
 //express app setup
 const app = express();
 
 app.set("view-engine", "ejs");
-app.use(express.json({limit: "1mb"}));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-//setting up login session
+
+//session middleware setup
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    name: "Session",
+    secret: "demo-app-secret",
     resave: false,
     saveUninitialized: false,
-    rolling: true,
-    store: new PGstore({
+    store: new pgSession({
         pool: pool
     }),
     cookie: {
-        secure: true,
+        path: "/",
+        maxAge: 1000 * 60 * 20, //log out after 20 mins idle
         httpOnly: true,
+        secure: false,
         sameSite: true,
-        maxAge: 1000 * 60 * 15
     }
 }));
 
-//initialize routes
+
+//Redirect Middleware
+const redirectLogin = (req, res, next) => {
+    if(!req.session.user) {
+        res.redirect("/");
+    }
+    else {
+        next();
+    }
+};
+
+const redirectDashboard = (req, res, next) => {
+    if(req.session.user) {
+        res.redirect("/app");
+    }
+    else {
+        next();
+    }
+};
+
+
+
+//API and Auth routes
 app.use("/api", require("./routes/api"));
 app.use("/auth", require("./auth/auth"));
 
 
 //routes used for navigation
-app.get("/", (request, response) => {
-    if(request.session.user)
-    {
-        if(request.session.loggedin)
-        {
-            response.render("app.ejs");
-            //console.table(request.session.user);
-            //console.log(request.session.loggedin);
-        }
-        else
-        {
-            response.render("login.ejs");
-        }
-    }
-    else
-    {
+app.get("/", redirectDashboard, (request, response) => {
         response.render("login.ejs");
-    }
 });
 
-app.get("/login", (request, response) => {
-    if(request.session.user)
-    {
-        if(request.session.loggedin)
-        {
-            response.render("app.ejs");
-        }
-        else
-        {
-            response.render("login.ejs");
-        }
-    }
-    else
-    {
-        response.render("login.ejs");
-    }
+app.get("/app", redirectLogin, (request, response) => {
+    response.render("app.ejs");
 });
 
-app.get("/app", (request, response) => {
-    if(request.session.user)
-    {
-        if(request.session.loggedin)
-        {
-            response.render("app.ejs");
-        }
-        else
-        {
-            response.render("login.ejs");
-        }
-    }
-    else
-    {
-        response.render("login.ejs");
-    }
-});
-
-//404 route
+//catch-all route
 app.get("*", (request, response) => {
-    if(request.session.user)
-    {
-        if(request.session.loggedin)
-        {
-            response.render("app.ejs");
-        }
-        else
-        {
-            response.render("login.ejs");
-        }
-    }
-    else
-    {
-        response.render("login.ejs");
-    }
+    response.redirect("/");
 });
 
 //default port = 3000
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Server running at port: ${port}`));
+app.listen(port, () => console.log(`Server running on port: ${port}`));

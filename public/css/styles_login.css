@@ -114,7 +114,6 @@ body {
 }
 
 .demo-btn {
-    text-transform: capitalize;
     padding: 2px 5px;
     border-radius: 5px;
     border: 1px solid #ffffff00;
